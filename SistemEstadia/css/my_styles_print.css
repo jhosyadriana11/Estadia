@@ -1,0 +1,30 @@
+/* Cuando el dispositivo de salida sea una impresora */
+@media print {
+
+	* {
+		font-family: Arial, Helvetica, sans-serif;
+		
+	}
+	
+  /* Utilizar una regla parecida a ésta: */
+  .ocultar-al-imprimir {
+    display: none;
+  }
+  
+  #proyectos_aa thead tr th{
+  	border-bottom: 1px solid black;
+  	font-size: 8px;
+  	
+  }
+  
+  #proyectos_aa tbody tr td{
+  	border-bottom: 1px solid black;
+  	font-size: 6px;
+  }
+  
+  small{
+  	font-family: "Trebuchet MS","Arial Narrow" ;
+	font-size: 8px;
+  }
+  
+}

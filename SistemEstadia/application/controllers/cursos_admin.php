@@ -24,16 +24,11 @@ class cursos_admin extends CI_Controller {
         );
         $this->load->view('template', $data);
 	}
-
-    /*public function displaydata()
-    {
-        $result['data']=$this->m_cursos_admin->display_records();
-        $this->load->view('template',$result);
-    }*/
+    
     public function deletedata()
     {
-    $id=$this->input->get('idcurso');
-    $response=$this->m_cursos_admin->deleterecords($id);
+    $idcurso=$this->input->get('idcurso');
+    $response=$this->m_cursos_admin->deleterecords($idcurso);
     if($response==true){
         echo '<script type="text/javascript">
                     alert("Curso eliminado correctamente");

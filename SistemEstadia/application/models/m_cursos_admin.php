@@ -23,5 +23,10 @@ class m_cursos_admin extends CI_Model {
 		$query = $this->db->get();
 		return $query;
     }
-   
+    function deleterecords($id)
+    {
+      $this->db->where("idcurso", $id);
+      $this->db->delete("curso");
+      return true;
+    }
 }

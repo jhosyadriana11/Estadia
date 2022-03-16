@@ -6,8 +6,8 @@
     </head>
     <body>
     <h4>Profesores</h4>
-        <table border="1">
-            <tr>
+        <table border="1" width="600" border="0" cellspacing="5" cellpadding="5">
+            <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">Nombre del profesor</th>
             </tr>
             <tbody>

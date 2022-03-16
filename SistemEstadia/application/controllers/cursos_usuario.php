@@ -18,7 +18,7 @@ class cursos_usuario extends CI_Controller {
 	{
         $_SESSION['utc_ch']=2;
 		$data = array(
-            'view'	=> array ('view' => array('cursos_usuario'), 'title' => 'Cursos'),
+            'view'	=> array ('view' => array('cursos_catalogo'), 'title' => 'Cursos'),
             'data'	=> array ()
         );
         $this->load->view('template', $data);

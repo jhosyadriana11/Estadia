@@ -18,12 +18,17 @@ class cursos_admin extends CI_Controller {
 	{
         $_SESSION['utc_ch']=4;
 		$data = array(
-            'view'	=> array ('view' => array('cursos_agregar_admin'), 'title' => 'Cursos'),
-            'data'	=> array ()
+            $requests = $this->m_cursos_admin->get_cursos(),
+            'view'	=> array ('view' => array('cursos_catalogo_admin'), 'title' => 'Cursos'),
+            'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);
 	}
 
-    
+    /*public function displaydata()
+    {
+        $result['data']=$this->m_cursos_admin->display_records();
+        $this->load->view('template',$result);
+    }*/
 }
 ?>

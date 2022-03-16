@@ -3,6 +3,15 @@ class m_profesores_admin extends CI_Model {
     function __construct() 
 	{
         parent::__construct();
-        
+        $this->load->database();
+
+    }
+
+    public function get_profesores()
+    {
+		$this->db->select('nombrep');
+		$this->db->from('profesor');
+		$query = $this->db->get();
+		return $query;
     }
 }

@@ -9,21 +9,23 @@
         <table border="1">
             <tbody>
                 <tr>
+                    <th>No. Curso</th>
                     <th>Nombre del curso</th>
-                    <th>Estatus</th>
+                    <th>Material</th>
                     <th>Examen</th>
-                    <th>Calificación</th>
+                    <th>Evidencia</th>
                 </tr>
+                <td>
+                    01
+                </td>
                 <td>
                     Curso principiantes
                 </td>
-                <td>
-                    Terminado
-                </td>
-                <td>
-                    <button>Realizar examen</button>
-                </td>
                 <td>No disponible</td>
+                <td>No disponible</td>
+                <td>
+                    <button>Subir Evidencia</button>
+                </td>
             </tbody>
         </table>
         

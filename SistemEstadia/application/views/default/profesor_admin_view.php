@@ -7,15 +7,15 @@
     <body>
     <h4>Profesores</h4>
         <table border="1">
+            <tr>
+                <th align="left" style="font-size: 12px;">Nombre del profesor</th>
+            </tr>
             <tbody>
+            <?php foreach($table->result() as $row): ?>
                 <tr>
-                    <th>Nombre del profesor</th>
-                    <th>No. de cursos</th>
-                    <th>Terminados</th>
+                <td valign='middle' align='left' style=''><a href="<?php echo site_url(); ?>miscursos"><?php echo $row->nombrep?></td>
                 </tr>
-                <td>Juana</td>
-                <td>3</td>
-                <td>2</td>
+            <?php endforeach ?>
             </tbody>
         </table>
     </body>

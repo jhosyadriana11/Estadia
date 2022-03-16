@@ -17,9 +17,10 @@ class profesores_admin extends CI_Controller {
     public function index()
 	{
         $_SESSION['utc_ch']=4;
+        $requests = $this->m_profesores_admin->get_profesores();
 		$data = array(
             'view'	=> array ('view' => array('profesor_admin_view'), 'title' => 'Profesor'),
-            'data'	=> array ()
+            'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);
 	}

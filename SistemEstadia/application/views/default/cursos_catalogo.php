@@ -6,17 +6,18 @@
     </head>
     <body>
         <h4>Cursos</h4>
-        <button>+</button>
-        <button>-</button>
-        <button>✏︎</button>
         <table border="1">
             <tbody>
                 <tr>
+                    <th>Id</th>
                     <th>Nombre del curso</th>
-                    <th>Duración</th>
+                    <th>Clasificación</th>
+                    <th></th>
                 </tr>
+                <td>01</td>
                 <td>Curso principiantes</td>
-                <td>25 horas</td>
+                <td>Básicos</td>
+                <td><button>Inscribirme</button></td>
             </tbody>
         </table>
         

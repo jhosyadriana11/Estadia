@@ -53,9 +53,9 @@
 	    <?php
 	    //if ($_SESSION["utc_departamento_id"]==9) {  
 								?> 
-	    <li class="nav-item" >
+	    <!--<li class="nav-item" >
 	      <a class="nav-link" href="<?php echo site_url(); ?>examenes_admin" style="">EXÁMENES</a>
-	    </li>
+	    </li>-->
 	    <?php //} ?>
 	    
 	    <?php

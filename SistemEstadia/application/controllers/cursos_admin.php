@@ -42,5 +42,6 @@ class cursos_admin extends CI_Controller {
                     </script>';
     }
     }
+    
 }
 ?>

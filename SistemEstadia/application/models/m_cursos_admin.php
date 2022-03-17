@@ -29,5 +29,14 @@ class m_cursos_admin extends CI_Model {
       $this->db->delete("curso");
       return true;
     }
-     
+    function displayrecordsById($idcurso)
+    {
+    $query=$this->db->query("select * from curso where idcurso='".$idcurso."'");
+    return $query->result();
+    }
+    /*Update*/
+    function update_records($nombrec,$material,$examen, $clasificacion, $idcurso)
+    {
+    $query=$this->db->query("update curso SET nombrec='$nombrec',material='$material',examen='$examen',clasificacion='$clasificacion' where idcurso='$idcurso'");
+    }
 }

@@ -2,16 +2,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Actualizar Cursos </title>
+    <title>Actualizar Curso </title>
     </head>
     
     <body>
-    <h4>Actualizar Cursos</h4>
-    <?php
-  $i=1;
-  foreach($data as $row)
-  {
-  ?>
+    <h4>Actualizar Curso</h4>
+    <?php foreach($table->result() as $row): ?>
         <form method="post">
             <table width="600" border="1" cellspacing="5" cellpadding="5">
     <tr>
@@ -38,10 +34,10 @@
     </tr>
     <tr>
         <td colspan="2" align="center">
-        <input type="submit" name="update" value="Update_Records"/></td>
+        <input type="submit" name="update" value="Actualizar"/></td>
     </tr>
     </table>
         </form>
-        <?php } ?>
+        <?php endforeach ?>
     </body>
 </html>

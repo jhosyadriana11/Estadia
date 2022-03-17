@@ -13,8 +13,7 @@ class cursos_actualizar extends CI_Controller {
 		//$this->load->library('phpmailer_lib');
 		
     }
-    
-    /*public function index()
+    public function index()
 	{
         $_SESSION['utc_ch']=4;
 		$data = array(
@@ -23,28 +22,21 @@ class cursos_actualizar extends CI_Controller {
             'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);
-	}*/
-	public function dispdata()
-	{
-	$result['data']=$this->m_cursos_actualizar->display_records();
-	$this->load->view('cursos_catalogo_admin',$result);
 	}
-    
     public function updatedata()
 	{
-
 	$idcurso=$this->input->get('idcurso');
 	$result['data']=$this->m_cursos_actualizar->displayrecordsById($idcurso);
-	//$this->load->view('cursos_actualizar_view',$result);
+	$this->load->view('cursos_actualizar_view',$result);
 	
-		if($this->input->post('update'))
-		{
-		$nombrec=$this->input->post('nombrec');
-		$material=$this->input->post('material');
-		$examen=$this->input->post('examen');
-        $clasificacion=$this->input->post('clasificacion');
-		$this->m_cursos_actualizar->update_records($nombrec, $material, $examen, $clasificacion, $idcurso);
-		echo "Date updated successfully !";
-		}
+    if($this->input->post('update'))
+    {
+    $nombrec=$this->input->post('nombrec');
+    $material=$this->input->post('material');
+    $examen=$this->input->post('examen');
+    $clasificacion=$this->input->post('clasificacion');
+    $this->m_cursos_actualizar->update_records($nombrec, $material, $examen, $clasificacion, $idcurso);
+    echo "Date updated successfully !";
+    }
 	}
 }

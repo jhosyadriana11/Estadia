@@ -16,29 +16,28 @@ class cursos_actualizar extends CI_Controller {
     public function index()
 	{
         $_SESSION['utc_ch']=4;
-		$data = array(
+		
+	}
+    
+    public function updatedata()
+	{
+        $data = array(
             $idcurso=$this->input->get('idcurso'),
             $requests = $this->m_cursos_actualizar->get_cursos($idcurso),
             'view'	=> array ('view' => array('cursos_actualizar_view'), 'title' => 'Cursos'),
             'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);
-	}
-    
-    public function updatedata()
-	{
-        $idcurso=$this->input->get('idcurso');
-	    /*$result=$this->m_cursos_actualizar->displayrecordsById($idcurso);
-        $this->load->view('template', $result);*/
 	
     if($this->input->post('update'))
     {
-        $data['nombrec']=$this->input->post('nombrec');
-        $data['material']=$this->input->post('material');
-        $data['examen']=$this->input->post('examen');
-        $data['clasificacion']=$this->input->post('clasificacion');
-        $response=$this->m_cursos_actualizar->update_records($idcurso, $data);
-		//redirect("cursos_admin");	
+        $datos=array(
+            'nombrec'=>$this->input->post('nombrec'),
+            'material'=>$this->input->post('material'),
+            'examen'=>$this->input->post('examen'),
+            'clasificacion'=>$this->input->post('clasificacion')
+        );
+        $response=$this->m_cursos_actualizar->update_records($idcurso,$datos);
         if($response==true){
 			        echo '<script type="text/javascript">
                     alert("Curso actualizado correctamente");

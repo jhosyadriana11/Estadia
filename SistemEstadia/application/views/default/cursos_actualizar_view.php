@@ -8,10 +8,10 @@
     <body>
     <h4>Actualizar Curso</h4>
     <?php foreach($table->result() as $row): ?>
-        <form method="post" action="<?= base_url() ?>cursos_actualizar/updatedata">
+        <form method="post" >
             <table width="600" border="1" cellspacing="5" cellpadding="5">
     <tr>
-        <td width="230">No. Curso</td>
+        <td width="230">No. Curso </td>
         <td width="329" valign='middle' align='left' style=''><?php echo $row->idcurso?></td>
     </tr>
     <tr>

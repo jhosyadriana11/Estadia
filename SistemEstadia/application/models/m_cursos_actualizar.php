@@ -19,18 +19,16 @@ class m_cursos_actualizar extends CI_Model {
 		$query = $this->db->get();
 		return $query;
     }
-    
-    /*Update*/
-    public function update_records($idcurso, $data)
-    {
-      //return $this->db->where(['idcurso', $idcurso])->update('curso', $data);
-      //$this->db->where('idcurso', $idcurso);
-      $this->db->update('curso', $data);
-      //$query=$this->db->query("update curso SET nombrec="$data['nombrec']",material="$data['material']",examen="$data['examen']",clasificacion="$data['clasificacion']" where idcurso='".$idcurso."'");
-    }
     function displayrecordsById($idcurso)
     {
     $query=$this->db->query("select * from curso where idcurso='".$idcurso."'");
     return $query->result();
+    }
+    /*Update*/
+    public function update_records($idcurso,$datos)
+    {
+      $this->db->where('idcurso', $idcurso);
+      $this->db->update('curso', $datos);
+      return true;
     }
 }

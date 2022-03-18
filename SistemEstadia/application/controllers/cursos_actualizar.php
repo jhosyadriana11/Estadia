@@ -17,26 +17,41 @@ class cursos_actualizar extends CI_Controller {
 	{
         $_SESSION['utc_ch']=4;
 		$data = array(
-            $requests = $this->m_cursos_actualizar->get_cursos(),
+            $idcurso=$this->input->get('idcurso'),
+            $requests = $this->m_cursos_actualizar->get_cursos($idcurso),
             'view'	=> array ('view' => array('cursos_actualizar_view'), 'title' => 'Cursos'),
             'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);
 	}
+    
     public function updatedata()
 	{
-	$idcurso=$this->input->get('idcurso');
-	$result['data']=$this->m_cursos_actualizar->displayrecordsById($idcurso);
-	$this->load->view('cursos_actualizar_view',$result);
+        $idcurso=$this->input->get('idcurso');
+	    /*$result=$this->m_cursos_actualizar->displayrecordsById($idcurso);
+        $this->load->view('template', $result);*/
 	
     if($this->input->post('update'))
     {
-    $nombrec=$this->input->post('nombrec');
-    $material=$this->input->post('material');
-    $examen=$this->input->post('examen');
-    $clasificacion=$this->input->post('clasificacion');
-    $this->m_cursos_actualizar->update_records($nombrec, $material, $examen, $clasificacion, $idcurso);
-    echo "Date updated successfully !";
+        $data['nombrec']=$this->input->post('nombrec');
+        $data['material']=$this->input->post('material');
+        $data['examen']=$this->input->post('examen');
+        $data['clasificacion']=$this->input->post('clasificacion');
+        $response=$this->m_cursos_actualizar->update_records($idcurso, $data);
+		//redirect("cursos_admin");	
+        if($response==true){
+			        echo '<script type="text/javascript">
+                    alert("Curso actualizado correctamente");
+                    window.location.href="../cursos_admin";
+                    </script>';
+			}
+			else{
+                    echo '<script type="text/javascript">
+                    alert("Curso no actualizado");
+                    window.location.href="../cursos_admin";
+                    </script>';
+			}
     }
 	}
 }
+

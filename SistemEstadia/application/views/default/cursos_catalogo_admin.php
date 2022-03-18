@@ -26,7 +26,7 @@
                 <td valign='middle' align='left' style=''><?php echo $row->examen?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
                 <?php echo "<td><a href='cursos_admin/deletedata?idcurso=".$row->idcurso."'>Eliminar</td>"; ?>
-                <?php echo "<td><a href='cursos_actualizar'>Actualizar</td>"; ?>
+                <?php echo "<td><a href='cursos_actualizar/index?idcurso=".$row->idcurso."'>Actualizar</td>"; ?>
                  </tr>
             <?php endforeach ?>
             </tbody>

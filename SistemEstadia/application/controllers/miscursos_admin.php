@@ -23,7 +23,5 @@ class miscursos_admin extends CI_Controller {
         );
         $this->load->view('template', $data);
 	}
-
-    
 }
 ?>

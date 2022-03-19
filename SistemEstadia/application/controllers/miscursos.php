@@ -23,7 +23,5 @@ class miscursos extends CI_Controller {
         );
         $this->load->view('template', $data);
 	}
-
-    
 }
 ?>

@@ -13,7 +13,7 @@
             <tbody>
             <?php foreach($table->result() as $row): ?>
                 <tr>
-                <td valign='middle' align='left' style=''><a href="<?php echo site_url(); ?>miscursos"><?php echo $row->nombrep?></td>
+                <td valign='middle' align='left' style=''><a href="<?php echo site_url(); ?>miscursos_admin"><?php echo $row->nombrep?></td>
                 </tr>
             <?php endforeach ?>
             </tbody>

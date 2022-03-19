@@ -6,6 +6,7 @@
     </head>
     <body>
         <h4>Mis Cursos</h4>
+        <p>Nombre del profesor<p>
         <table border="1" width="600" border="0" cellspacing="5" cellpadding="5">
             <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">No. Curso</th>

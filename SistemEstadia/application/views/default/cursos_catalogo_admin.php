@@ -25,10 +25,22 @@
                 <td valign='middle' align='left' style=''><?php echo $row->material?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->examen?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
-                <?php echo "<td><a href='cursos_admin/deletedata?idcurso=".$row->idcurso."'>Eliminar</td>"; ?>
+                <?php echo "<td><a onclick='return Borrar();' href='cursos_admin/deletedata?idcurso=".$row->idcurso."'>Eliminar</td>"; ?>
                 <?php echo "<td><a href='cursos_actualizar/updatedata?idcurso=".$row->idcurso."'>Actualizar</td>"; ?>
                  </tr>
             <?php endforeach ?>
+            <?php 
+                echo "<script>
+                 function Borrar(){   
+                if(confirm('¿Seguro que quieres eliminar el curso?')){ç
+                    return true;
+                    }else{
+                        return false;
+                    }
+                }
+                </script>";
+            
+            ?>
             </tbody>
         </table>
      </body>

@@ -19,7 +19,7 @@
                 <td valign='middle' align='left' style=''><?php echo $row->idcurso?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->nombrec?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
-                <td valign='middle' align='left' style=''><button>Inscribirme</button></td>
+                <td valign='middle' align='left' style=''><a href='miscursos'>Inscribirme</td>
                 </tr>
             <?php endforeach ?>
             </tbody>

@@ -24,6 +24,12 @@
     <option value="Disciplinaria">Disciplinaria</option> 
     </select>
   <br/>
+    <label>Observación </label>
+    <input type="text" name="observacion"/>
+  </br>
+    <label>Fecha </label>
+    <input type="date" name="fecha"/>
+  </br>
     <input type="submit" colspan="2" align="center" name="save" value="Guardar"/>
 	</form>
 </body>

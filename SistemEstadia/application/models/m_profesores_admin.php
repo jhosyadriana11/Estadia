@@ -9,7 +9,7 @@ class m_profesores_admin extends CI_Model {
 
     public function get_profesores()
     {
-		$this->db->select('nombrep');
+		$this->db->select('*');
 		$this->db->from('profesor');
 		$query = $this->db->get();
 		return $query;

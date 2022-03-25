@@ -60,7 +60,7 @@ class miscursos extends CI_Controller {
 
         $mi_archivo = 'file';
         $config['upload_path'] = "uploads/";
-        $config['file_name'] = "nombre_archivo";
+        $config['file_name'] = "";
         $config['allowed_types'] = "pdf";
         $config['max_size'] = "50000";
         $config['max_width'] = "2000";
@@ -72,7 +72,7 @@ class miscursos extends CI_Controller {
             //*** ocurrio un error
             //$data['uploadError'] = $this->upload->display_errors();
             echo '<script type="text/javascript">
-                    alert("Evidencia no agregada correctamente");
+                    alert("Evidencia no agregada correctamente, debe ser un archivo pdf");
                     window.location.href="../miscursos";
                     </script>';
         }

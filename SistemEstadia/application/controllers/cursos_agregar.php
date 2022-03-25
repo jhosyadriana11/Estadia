@@ -31,18 +31,20 @@ class cursos_agregar extends CI_Controller {
 			$this->m_cursos_agregar->cursos_agregar($_POST);
 			echo json_encode(true);			
 	}*/
-    public function savedata()
+    
+	public function savedata()
 	{
 		/*load registration view form*/
 		//$this->load->view('cursos_agregar_view');
-	
 		/*Check submit button */
 		if($this->input->post('save'))
 		{
-		    $data['nombrec']=$this->input->post('nombrec');
+			$data['nombrec']=$this->input->post('nombrec');
 			$data['material']=$this->input->post('material');
 			$data['examen']=$this->input->post('examen');
             $data['clasificacion']=$this->input->post('clasificacion');
+			$data['observacion']=$this->input->post('observacion');
+			$data['fecha']=$this->input->post('fecha');
 			$response=$this->m_cursos_agregar->saverecords($data);
 			if($response==true){
 			        echo '<script type="text/javascript">

@@ -35,7 +35,9 @@ class cursos_actualizar extends CI_Controller {
             'nombrec'=>$this->input->post('nombrec'),
             'material'=>$this->input->post('material'),
             'examen'=>$this->input->post('examen'),
-            'clasificacion'=>$this->input->post('clasificacion')
+            'clasificacion'=>$this->input->post('clasificacion'),
+            'observacion'=>$this->input->post('observacion'),
+            'fecha'=>$this->input->post('fecha')
         );
         $response=$this->m_cursos_actualizar->update_records($idcurso,$datos);
         if($response==true){

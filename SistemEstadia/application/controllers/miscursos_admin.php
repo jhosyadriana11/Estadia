@@ -17,8 +17,9 @@ class miscursos_admin extends CI_Controller {
 	{
         $_SESSION['utc_ch']=2;
 		$data = array(
-            $requests = $this->m_miscursos_admin->get_cursos(),
-            'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Mis cursos'),
+            $idprofesor=$this->input->get('idprofesor'),
+            $requests = $this->m_miscursos_admin->get_cursos($idprofesor),
+            'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Cursos'),
             'data'	=> array ('table' => $requests)
         );
         $this->load->view('template', $data);

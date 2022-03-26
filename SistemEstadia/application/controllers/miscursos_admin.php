@@ -19,10 +19,22 @@ class miscursos_admin extends CI_Controller {
 		$data = array(
             $idprofesor=$this->input->get('idprofesor'),
             $requests = $this->m_miscursos_admin->get_cursos($idprofesor),
+            $requests2 = $this->m_miscursos_admin->get_profesores($idprofesor),
             'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Cursos'),
-            'data'	=> array ('table' => $requests)
+            'data'	=> array ('table' => $requests, 'ver' => $requests2),
+            
         );
         $this->load->view('template', $data);
 	}
+
+    /*public function count()
+	{
+            $idprofesor=$this->input->get('idprofesor');
+            $count = $this->m_miscursos_admin->get_count($idprofesor);
+            //$requests2 = $this->m_miscursos_admin->get_profesores($idprofesor),
+            //'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Cursos'),
+	}*/
+
+
 }
 ?>

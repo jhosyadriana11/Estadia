@@ -6,8 +6,8 @@
     </head>
     <body>
         <h4>Mis Cursos</h4>
-        <?php foreach($table->result() as $row): ?>
-        <p><?php echo $row->nombrep?><p>
+        <?php foreach($ver->result() as $row): ?>
+            <p><?php echo $row->nombrep?><p>
         <?php endforeach ?>
         <table border="1" width="600" border="0" cellspacing="5" cellpadding="5">
             <tr style="background:#CCC">

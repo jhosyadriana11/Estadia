@@ -21,4 +21,27 @@ class m_miscursos_admin extends CI_Model {
     $query = $this->db->get();
 		return  $query;
     }
+
+    public function get_profesores($idprofesor)
+    {
+		$this->db->select('nombrep');
+		$this->db->from('profesor');
+    $this->db->where('idprofesor', $idprofesor);
+    $query = $this->db->get();
+		return  $query;
+    }
+
+    /*public function get_count($idprofesor)
+    {
+      //SELECT COUNT(*) FROM detalleprocur WHERE idprofesor=3
+    //$this->db->count('*'),
+    $this->db->where('idprofesor', $idprofesor);
+		$this->db->from('detalleprocur d');
+    $this->db->join('curso c', 'c.idcurso = d.idcurso');
+    $this->db->join('profesor p', 'p.idprofesor = d.idprofesor');
+    $this->db->count_all_results('detalleprocur');
+    //var_dump($rows);
+    $query = $this->db->get();
+		return  $query;
+    }*/
 }

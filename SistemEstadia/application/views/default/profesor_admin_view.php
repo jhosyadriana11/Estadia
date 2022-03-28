@@ -16,7 +16,7 @@
             <?php foreach($table->result() as $row): ?>
                 <tr>
                 <td valign='middle' align='left' style='' id="nombre"><?php echo $row->nombrep?></td>
-                <td valign='middle' align='left' style=''><?php echo 'request2'?></td>
+                <td valign='middle' align='left' style=''><?php echo $count?></td>
                 <?php echo "<td><a onclick='return nombrep();' href='miscursos_admin/index?idprofesor=".$row->idprofesor."'>Historial</td>"; ?>
                 </tr>
             <?php endforeach ?>

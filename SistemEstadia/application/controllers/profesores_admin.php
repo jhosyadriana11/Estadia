@@ -17,17 +17,16 @@ class profesores_admin extends CI_Controller {
     public function index()
 	{
         $_SESSION['utc_ch']=4;
-        //$idprofesor=$this->input->get('idprofesor');
-        //$requests2 = $this->m_profesores_admin->get_count($idprofesor);
+        $idprofesor=$this->input->get('idprofesor');
+        //$requests2 = $this->m_profesores_admin->get_count($idprofesor)
 		$data = array(
-            $idprofesor=$this->input->get('idprofesor'),
+            //$idprofesor=$this->input->get('idprofesor'),
             $requests = $this->m_profesores_admin->get_profesores(),
             $requests2 = $this->m_profesores_admin->get_count($idprofesor)->row(),
             'view'	=> array ('view' => array('profesor_admin_view'), 'title' => 'Profesor'),
-            'data'	=> array ('table' => $requests, 'count'=> $requests2->cursos)
+            'data'	=> array ('table' => $requests, 'count' => $requests2->cursos)
         );
         $this->load->view('template', $data);
-        
 	}
 
     /*public function get_count2()

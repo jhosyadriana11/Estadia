@@ -20,8 +20,8 @@ class m_profesores_admin extends CI_Model {
     //$query=$this->db->query("select count(*) AS numero from detalleprocur where idprofesor='$idprofesor'");
       //SELECT COUNT(*) FROM detalleprocur WHERE idprofesor=3
     //$this->db->count('*')
-    $this->db->where('idprofesor', $idprofesor);
     $this->db->select('count(idprofesor) as cursos');
+    $this->db->where('idprofesor', $idprofesor);
 		$this->db->from('detalleprocur');
     //$this->db->join('detalleprocur d', 'c.idcurso = d.idcurso');
     //$this->db->join('profesor p', 'p.idprofesor = d.idprofesor');

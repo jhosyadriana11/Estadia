@@ -36,7 +36,7 @@
             <?php 
                 echo "<script>
                  function Borrar(){   
-                if(confirm('¿Seguro que quieres eliminar el curso?')){ç
+                if(confirm('¿Seguro que quieres eliminar el curso?')){
                     return true;
                     }else{
                         return false;

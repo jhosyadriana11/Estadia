@@ -12,4 +12,10 @@ class m_cursos_usuario extends CI_Model {
 		$query = $this->db->get();
 		return $query;
     }
+
+    function savecurso($data)
+	{
+        $this->db->insert('detalleprocur', $data);
+        return true;
+	}
 }

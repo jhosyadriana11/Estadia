@@ -25,5 +25,26 @@ class cursos_usuario extends CI_Controller {
         $this->load->view('template', $data);
 	}
     
+    public function savec()
+	{
+		/*load registration view form*/
+		//$this->load->view('cursos_agregar_view');
+		/*Check submit button */
+		if($this->input->post('inscribirme'))
+		{
+			$data['idprofesor']=$this->input->post('idprofesor');
+            $data['idcurso']=$this->input->post('idcurso');
+			$response=$this->m_cursos_usuario>savecurso($data);
+			if($response==true){
+			        echo '<script type="text/javascript">
+                    alert("Curso agregado correctamente");
+                    window.location.href="../miscursos";
+                    </script>';
+			}
+			else{
+					echo "Insert error !";
+			}
+		}
+	}
 }
 ?>

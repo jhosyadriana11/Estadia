@@ -23,7 +23,7 @@
                 <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->observacion?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
-                <td valign='middle' align='left' style=''><a href='miscursos'>Inscribirme</td>
+                <td valign='middle' align='left' style=''><input type="submit" colspan="2" align="center" name="inscribirme" value="Inscribirme"/></td>
                 </tr>
             <?php endforeach ?>
             </tbody>

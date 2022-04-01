@@ -45,6 +45,7 @@ class cursos_agregar extends CI_Controller {
             $data['clasificacion']=$this->input->post('clasificacion');
 			$data['observacion']=$this->input->post('observacion');
 			$data['fecha']=$this->input->post('fecha');
+			$data['estatus']=$this->input->post('estatus');
 			$response=$this->m_cursos_agregar->saverecords($data);
 			if($response==true){
 			        echo '<script type="text/javascript">

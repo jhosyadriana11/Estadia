@@ -32,13 +32,18 @@
     </div>
     <div class="col mb-2">
       <div >
-        <label class="form-label">Observación </label>
+        <label class="form-label">Observación</label>
         <textarea class="form-control form-control-sm" type="text" style="width: 900px;" name="observacion"></textarea>
       </div>
     </div>
     <div class="col mb-2">
-      <label class="form-label">Fecha </label>
+      <label class="form-label">Fecha</label>
       <input class="form-control form-control-sm" type="date" style="width: 900px;" name="fecha"/>
+    </div>
+    <div class="col mb-2">
+      <label class="form-label">Estatus </label></br>
+      <input class="form-control-sm" type="radio" name="estatus" value="Activo">Activo
+      <input class="form-control-sm" type="radio" name="estatus" value="Inactivo">Inactivo
     </div>
     <div class="col mb-2">
       <input class="btn btn-sm btn-primary btnUTCAzul" type="submit" colspan="2" align="center" name="save" value="Guardar"/>

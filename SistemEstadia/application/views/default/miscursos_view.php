@@ -5,9 +5,10 @@
         <title>Mis Cursos</title>
     </head>
     <body>
-        <h4>Mis Cursos</h4>
+    <div class="col mb-2">
+        <h4>Mis Cursos</h4></br>
         <form method="POST" action="<?= base_url() ?>miscursos/cargar_archivo" enctype="multipart/form-data">
-        <table border="1" width="800" border="0" cellspacing="5" cellpadding="5">
+        <table class="table table-sm table-hover table-striped border-rounded" cellspacing="0px" cellpadding="10px">
             <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">No. Curso</th>
                 <th align="left" style="font-size: 12px;">Nombre del curso</th>
@@ -34,5 +35,6 @@
             </tbody>
         </table>
             </form>
+        </div>
     </body>
 </html>

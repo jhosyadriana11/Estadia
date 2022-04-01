@@ -5,8 +5,9 @@
         <title>Cursos</title>
     </head>
     <body>
-        <h4>Cursos</h4>
-        <table border="1" width="800" border="0" cellspacing="5" cellpadding="5">
+    <div class="col mb-2">
+        <h4>Cursos</h4></br>
+        <table class="table table-sm table-hover table-striped border-rounded" cellspacing="0px" cellpadding="10px">
             <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">No. Curso</th>
                 <th align="left" style="font-size: 12px;">Nombre del curso</th>
@@ -23,10 +24,11 @@
                 <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->observacion?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
-                <td valign='middle' align='left' style=''><input type="submit" colspan="2" align="center" name="inscribirme" value="Inscribirme"/></td>
+                <td valign='middle' align='left' style=''><input type="submit" colspan="2" class='btn btn-sm btn-secondary' align="center" name="inscribirme" value="Inscribirme"/></td>
                 </tr>
             <?php endforeach ?>
             </tbody>
         </table>
+        </div>
     </body>
 </html>

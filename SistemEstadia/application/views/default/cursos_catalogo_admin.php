@@ -20,6 +20,7 @@
                     <th align="left" style="font-size: 12px;">Clasificación</th>
                     <th align="left" style="font-size: 12px;">Observación</th>
                     <th align="left" style="font-size: 12px;">Fecha de creación</th>
+                    <th align="left" style="font-size: 12px;">Estatus</th>
                     <th align="left" style="font-size: 12px;">Eliminar</th>
                     <th align="left" style="font-size: 12px;">Actualizar</th>
                 </tr>
@@ -33,6 +34,7 @@
                     <td valign='middle' align='left' style=''><?php echo $row->clasificacion?></td>
                     <td style="width: 400px;" valign='middle' align='left' style=''><?php echo $row->observacion?></td>
                     <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
+                    <td valign='middle' align='left' style=''><?php echo $row->estatus?></td>
                     <?php echo "<td><a class='btn btn-sm btn-danger' onclick='return Borrar();' href='cursos_admin/deletedata?idcurso=".$row->idcurso."'>Eliminar</td>"; ?>
                     <?php echo "<td><a class='btn btn-sm btn-secondary' href='cursos_actualizar/updatedata?idcurso=".$row->idcurso."'>Actualizar</td>"; ?>
                     </tr>

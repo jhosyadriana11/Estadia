@@ -48,6 +48,11 @@
                 <td width="400" valign='middle' align='left' style=''><input type="date" class="form-control form-control-sm" name="fecha" value="<?php echo $row->fecha; ?>"/></td>
             </tr>
             <tr>
+            <td width="150" class="form-label">Estatus</td>
+            <td width="400" valign='middle' align='left' style=''><input class="form-control-sm" type="radio" name="estatus" value="Activo">Activo
+                <input class="form-control-sm" type="radio" name="estatus" value="Inactivo">Inactivo
+            </tr>
+            <tr>
                 <td colspan="2" align="center">
                 <input class="btn btn-sm btn-primary btnUTCAzul" type="submit" name="update" value="Actualizar"/></td>
             </tr>

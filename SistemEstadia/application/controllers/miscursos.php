@@ -15,16 +15,26 @@ class miscursos extends CI_Controller {
     
     public function index()
 	{
+        $_SESSION['utc_ch']=2;
+		$data = array(
+            $idprofesor=$this->input->get('idprofesor'),
+            $requests = $this->m_miscursos->get_cursos($idprofesor),
+            $requests2 = $this->m_miscursos->get_profesores($idprofesor),
+            'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Cursos'),
+            'data'	=> array ('table' => $requests, 'ver' => $requests2),
+            
+        );
+        $this->load->view('template', $data);
         //$_SESSION['utc_es']=4;
         //$_SESSION['utc_id']=2;
         //if(isset($_SESSION['utc_id']) && $_SESSION['utc_es']>1)
 		//{
-			$data = array(
+			/*$data = array(
                 $requests = $this->m_miscursos->get_cursos(),
                 'view'	=> array ('view' => array('miscursos_view'), 'title' => 'Mis cursos'),
                 'data'	=> array ('table' => $requests)
             );
-            $this->load->view('template', $data);
+            $this->load->view('template', $data);*/
 		//else
 		//{
 		//	redirect('../');

@@ -9,6 +9,7 @@ class m_cursos_usuario extends CI_Model {
     {
 		$this->db->select('*');
 		$this->db->from('curso');
+    $this->db->where('estatus', 'Activo');
 		$query = $this->db->get();
 		return $query;
     }

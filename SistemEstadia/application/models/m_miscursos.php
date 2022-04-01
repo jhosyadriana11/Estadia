@@ -11,12 +11,24 @@ class m_miscursos extends CI_Model {
         echo 'DB connection error!';*/
 
     }
-    public function get_cursos()
+    public function get_cursos($idprofesor)
     {
 		$this->db->select('*');
-		$this->db->from('curso');
-		$query = $this->db->get();
-		return $query;
+		$this->db->from('curso c');
+    $this->db->join('detalleprocur d', 'c.idcurso = d.idcurso');
+    $this->db->join('profesor p', 'p.idprofesor = d.idprofesor');
+    $this->db->where('d.idprofesor', $idprofesor);
+    $query = $this->db->get();
+		return  $query;
+    }
+
+    public function get_profesores($idprofesor)
+    {
+		$this->db->select('nombrep');
+		$this->db->from('profesor');
+    $this->db->where('idprofesor', $idprofesor);
+    $query = $this->db->get();
+		return  $query;
     }
     function save()
 	{

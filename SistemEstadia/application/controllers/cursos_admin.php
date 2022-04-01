@@ -31,15 +31,14 @@ class cursos_admin extends CI_Controller {
         $response=$this->m_cursos_admin->deleterecords($idcurso);
         if($response==true){
             redirect('cursos_admin');
-            /*echo '<script type="text/javascript">
+            echo '<script type="text/javascript">
                         alert("Curso eliminado correctamente");
                         window.location.href="../cursos_admin";
-                        </script>';*/
+                        </script>';
         }
         else{
             echo '<script type="text/javascript">
-                        alert("Error");
-                        window.location.href="../cursos_admin";
+                        alert("No se puede elminar ese curso");
                         </script>';
         }
     

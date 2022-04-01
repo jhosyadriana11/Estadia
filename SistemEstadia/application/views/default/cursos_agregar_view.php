@@ -11,19 +11,19 @@
     <form method="POST" action="<?= base_url() ?>cursos_agregar/savedata">
       <div class="col mb-2">
         <label width="230" class="form-label">Nombre del Curso </label>
-        <input class="form-control form-control-sm" type="text" style="width: 900px;" name="nombrec"/>
+        <input class="form-control form-control-sm" type="text" style="width: 900px;" name="nombrec" required/>
       </div>
     <div class="col mb-2">
       <label class="form-label">Material </label>
-      <input class="form-control form-control-sm" type="text" style="width: 900px;" name="material"/>
+      <input class="form-control form-control-sm" type="text" style="width: 900px;" name="material" required/>
     </div>
     <div class="col mb-2">
       <label class="form-label">Examen </label>
-      <input class="form-control form-control-sm" type="text" style="width: 900px;" name="examen"/>
+      <input class="form-control form-control-sm" type="text" style="width: 900px;" name="examen" required/>
     </div>
     <div class="col mb-2">
       <label class="form-label">Clasificación </label>
-      <select class="form-control form-control-sm" style="width: 900px;" name="clasificacion">
+      <select class="form-control form-control-sm" style="width: 900px;" name="clasificacion" required>
         <option value="Básicos">Básicos</option> 
         <option value="Enseñanza">Enseñanza</option> 
         <option value="Tecnología">Tecnología</option>
@@ -33,17 +33,17 @@
     <div class="col mb-2">
       <div >
         <label class="form-label">Observación</label>
-        <textarea class="form-control form-control-sm" type="text" style="width: 900px;" name="observacion"></textarea>
+        <textarea class="form-control form-control-sm" type="text" style="width: 900px;" name="observacion" required></textarea>
       </div>
     </div>
     <div class="col mb-2">
       <label class="form-label">Fecha</label>
-      <input class="form-control form-control-sm" type="date" style="width: 900px;" name="fecha"/>
+      <input class="form-control form-control-sm" type="date" style="width: 900px;" name="fecha" required/>
     </div>
     <div class="col mb-2">
       <label class="form-label">Estatus </label></br>
-      <input class="form-control-sm" type="radio" name="estatus" value="Activo">Activo
-      <input class="form-control-sm" type="radio" name="estatus" value="Inactivo">Inactivo
+      <input class="form-control-sm" type="radio" name="estatus" value="Activo" required>Activo
+      <input class="form-control-sm" type="radio" name="estatus" value="Inactivo" required>Inactivo
     </div>
     <div class="col mb-2">
       <input class="btn btn-sm btn-primary btnUTCAzul" type="submit" colspan="2" align="center" name="save" value="Guardar"/>

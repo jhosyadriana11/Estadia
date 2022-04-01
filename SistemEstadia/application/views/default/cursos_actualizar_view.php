@@ -49,8 +49,8 @@
             </tr>
             <tr>
             <td width="150" class="form-label">Estatus</td>
-            <td width="400" valign='middle' align='left' style=''><input class="form-control-sm" type="radio" name="estatus" value="Activo">Activo
-                <input class="form-control-sm" type="radio" name="estatus" value="Inactivo">Inactivo
+            <td width="400" valign='middle' align='left' style=''><input class="form-control-sm" type="radio" name="estatus" value="Activo"<?php if ($row->estatus == 'Activo') echo 'checked="checked"'; ?> />Activo
+                <input class="form-control-sm" type="radio" name="estatus" value="Inactivo"<?php if ($row->estatus == 'Inactivo') echo 'checked="checked"'; ?>/>Inactivo
             </tr>
             <tr>
                 <td colspan="2" align="center">

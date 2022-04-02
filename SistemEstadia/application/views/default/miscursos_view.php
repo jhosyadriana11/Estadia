@@ -8,6 +8,9 @@
     <div class="col mb-2">
         <h4>Mis Cursos</h4></br>
         <form method="POST" action="<?= base_url() ?>miscursos/cargar_archivo" enctype="multipart/form-data">
+        <?php foreach($ver->result() as $row): ?>
+            <h3><?php echo $row->nombrep?><h3>
+        <?php endforeach ?>
         <table class="table table-sm table-hover table-striped border-rounded" cellspacing="0px" cellpadding="10px">
             <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">No. Curso</th>

@@ -13,10 +13,17 @@ class m_cursos_usuario extends CI_Model {
 		$query = $this->db->get();
 		return $query;
     }
-
-    function savecurso($data)
+    public function get_profesores($idprofesor)
+    {
+		$this->db->select('nombrep');
+		$this->db->from('profesor');
+    $this->db->where('idprofesor', $idprofesor);
+    $query = $this->db->get();
+		return  $query;
+    }
+    public function savecurso($data)
 	{
-        $this->db->insert('detalleprocur', $data);
-        return true;
+      $this->db->insert('detalleprocur', $data);
+      return true;
 	}
 }

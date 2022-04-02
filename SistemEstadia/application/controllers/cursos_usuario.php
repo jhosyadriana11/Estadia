@@ -17,10 +17,12 @@ class cursos_usuario extends CI_Controller {
     public function index()
 	{
         $_SESSION['utc_ch']=2;
+		$idprofesor=$this->input->get('idprofesor');
 		$data = array(
             $requests = $this->m_cursos_usuario->get_cursos(),
+			$requests2 = $this->m_cursos_usuario->get_profesores($idprofesor),
             'view'	=> array ('view' => array('cursos_catalogo'), 'title' => 'Cursos'),
-            'data'	=> array ('table' => $requests)
+            'data'	=> array ('table' => $requests, 'ver' => $requests2)
         );
         $this->load->view('template', $data);
 	}

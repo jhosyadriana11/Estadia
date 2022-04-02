@@ -20,7 +20,7 @@ class miscursos extends CI_Controller {
             $idprofesor=$this->input->get('idprofesor'),
             $requests = $this->m_miscursos->get_cursos($idprofesor),
             $requests2 = $this->m_miscursos->get_profesores($idprofesor),
-            'view'	=> array ('view' => array('miscursos_admin'), 'title' => 'Cursos'),
+            'view'	=> array ('view' => array('miscursos_view'), 'title' => 'Cursos'),
             'data'	=> array ('table' => $requests, 'ver' => $requests2),
             
         );

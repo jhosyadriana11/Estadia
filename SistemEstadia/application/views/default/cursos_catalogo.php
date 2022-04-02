@@ -7,6 +7,10 @@
     <body>
     <div class="col mb-2">
         <h4>Cursos</h4></br>
+        <?php foreach($ver->result() as $row): ?>
+            <h5><?php echo $row->nombrep?><h5>
+        <?php endforeach ?>
+        <form method="POST" action="<?= base_url() ?>cursos_usuario/savec">
         <table class="table table-sm table-hover table-striped border-rounded" cellspacing="0px" cellpadding="10px">
             <tr style="background:#CCC">
                 <th align="left" style="font-size: 12px;">No. Curso</th>

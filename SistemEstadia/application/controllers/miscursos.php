@@ -99,6 +99,12 @@ class miscursos extends CI_Controller {
                     window.location.href="../miscursos";
                     </script>';
         
+        $descarga = scandir("uploads");
+        $num=0;
+    
+        for ($i=2; $i<count($descarga); $i++) {
+            $num++;
+        }
     }
 }
 ?>

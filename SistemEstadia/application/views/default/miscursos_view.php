@@ -9,7 +9,7 @@
         <h4>Mis Cursos</h4></br>
         <form method="POST" action="<?= base_url() ?>miscursos/cargar_archivo" enctype="multipart/form-data">
         <?php foreach($ver->result() as $row): ?>
-            <h3><?php echo $row->nombrep?><h3>
+            <h5><?php echo $row->nombrep?><h5>
         <?php endforeach ?>
         <table class="table table-sm table-hover table-striped border-rounded" cellspacing="0px" cellpadding="10px">
             <tr style="background:#CCC">
@@ -32,6 +32,7 @@
                 <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
                 <td valign='middle' align='left' style=''><input name="file" type="file"/>
                 <input type="submit" name="evidencia" value="Subir Evidencia"/></td>
+                <td><a title='Descargar Archivo' href='uploads/<?php echo $descarga[$i]; ?>' download='<?php echo $descarga[$i]; ?>'</a></td>
                 <!--<td valign='middle' align='left' style=''><button>Subir Evidencia</button></td>-->
                 </tr>
             <?php endforeach ?>

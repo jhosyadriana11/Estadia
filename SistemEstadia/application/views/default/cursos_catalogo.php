@@ -33,6 +33,7 @@
             <?php endforeach ?>
             </tbody>
         </table>
+            
         </div>
     </body>
 </html>

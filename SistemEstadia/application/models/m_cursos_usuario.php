@@ -7,22 +7,24 @@ class m_cursos_usuario extends CI_Model {
     }
     public function get_cursos()
     {
-		$this->db->select('*');
-		$this->db->from('curso');
-    $this->db->where('estatus', 'Activo');
-		$query = $this->db->get();
-		return $query;
+      $this->db->select('*');
+      $this->db->from('curso');
+      $this->db->where('estatus', 'Activo');
+      $query = $this->db->get();
+      return $query;
     }
+
     public function get_profesores($idprofesor)
     {
-		$this->db->select('nombrep');
-		$this->db->from('profesor');
-    $this->db->where('idprofesor', $idprofesor);
-    $query = $this->db->get();
-		return  $query;
+      $this->db->select('nombrep');
+      $this->db->from('profesor');
+      $this->db->where('idprofesor', $idprofesor);
+      $query = $this->db->get();
+      return  $query;
     }
+
     public function savecurso($data)
-	{
+    {
       $this->db->insert('detalleprocur', $data);
       return true;
 	}

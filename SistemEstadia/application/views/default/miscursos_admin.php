@@ -20,6 +20,7 @@
                     <th align="left" style="font-size: 12px;">Observación</th>
                     <th align="left" style="font-size: 12px;">Fecha de creación</th>
                     <th align="left" style="font-size: 12px;">Evidencia</th>
+                    <th align="left" style="font-size: 12px;">Descarga</th>
                 </tr>
                 <tbody>
                 <?php foreach($table->result() as $row): ?>
@@ -31,6 +32,7 @@
                     <td valign='middle' align='left' style=''><?php echo $row->observacion?></td>
                     <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
                     <td valign='middle' align='left' style=''>Evidencia</td>
+                    <td></td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>

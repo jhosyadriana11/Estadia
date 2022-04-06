@@ -38,4 +38,5 @@ class m_profesores_admin extends CI_Model {
     //$this->db->count_all('detalleprocur');
     //var_dump($rows);
     }
+
 }

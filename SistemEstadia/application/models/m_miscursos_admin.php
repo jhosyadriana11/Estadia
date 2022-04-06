@@ -31,6 +31,15 @@ class m_miscursos_admin extends CI_Model {
 		return  $query;
     }
 
+    public function get_descargas()
+    {
+      $archivos = scandir("uploads");
+      $num=0;
+      for ($i=2; $i<count($archivos); $i++)
+        {
+          $num++;
+        }
+    }
     /*public function get_count($idprofesor)
     {
       //SELECT COUNT(*) FROM detalleprocur WHERE idprofesor=3

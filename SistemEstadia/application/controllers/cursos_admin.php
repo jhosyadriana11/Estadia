@@ -27,7 +27,7 @@ class cursos_admin extends CI_Controller {
     
     public function deletedata()
     {
-        $idcurso=$this->input->get('idcurso');
+       $idcurso=$this->input->get('idcurso');
         $response=$this->m_cursos_admin->deleterecords($idcurso);
         if($response==true){
             //redirect('cursos_admin');
@@ -38,7 +38,8 @@ class cursos_admin extends CI_Controller {
         }
         else{
             echo '<script type="text/javascript">
-                        alert("No se puede elminar este curso");
+                        alert("No se puede eliminar un curso que tiene algún profesor inscrito");
+                        window.location.href="../cursos_admin";
                         </script>';
         }
     

@@ -30,9 +30,8 @@
                 <td valign='middle' align='left' style=''><?php echo $row->examen?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->observacion?></td>
                 <td valign='middle' align='left' style=''><?php echo $row->fecha?></td>
-                <td valign='middle' align='left' style=''><input name="file" type="file"/>
-                <input type="submit" name="evidencia" value="Subir Evidencia"/></td>
-                <td><a title='Descargar Archivo' href='uploads/<?php echo $descarga[$i]; ?>' download='<?php echo $descarga[$i]; ?>'</a></td>
+                <td valign='middle' align='left' style=''><input class='btn btn-sm btn-secondary' name="file" type="file"/>
+                <input class='btn btn-sm btn-secondary' type="submit" name="evidencia" value="Subir Evidencia"/></td>
                 <!--<td valign='middle' align='left' style=''><button>Subir Evidencia</button></td>-->
                 </tr>
             <?php endforeach ?>

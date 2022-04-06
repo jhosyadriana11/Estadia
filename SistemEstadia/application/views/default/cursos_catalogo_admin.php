@@ -53,6 +53,10 @@
                 ?>
                 </tbody>
             </table>
+            <div>
+                <p class="form-control-sm" style="margin: 340px 0px 300px 5px;">Número de filas:
+                <?php echo $this->db->count_all_results('curso'); ?></p>
+            </div>
         </div>
      </body>
 </html>

@@ -74,6 +74,28 @@ class miscursos extends CI_Controller {
             }
     }*/
     function cargar_archivo() {
+            /*$filename= $_FILES["file"]["name"];
+            $file_ext = pathinfo($filename,PATHINFO_EXTENSION);
+            $mi_archivo = 'file';
+            $config['upload_path'] = "uploads/";
+            $config['file_name'] = "";
+            $config['allowed_types'] = "pdf";
+            $config['max_size'] = "50000";
+            $config['max_width'] = "2000";
+            $config['max_height'] = "2000";
+    
+            $this->load->library('upload', $config);
+    
+            if (!$this->upload->do_upload($mi_archivo)) {
+                //*** ocurrio un error
+                $data['error_msg'] = $this->upload->display_errors();
+                $data['file_name'] =  $config['file_name'];
+                return  $data;
+            }
+            $data['status'] = 'True';
+            $data['file_name'] = $config['file_name'];
+            return $data;*/
+    
 
         $mi_archivo = 'file';
         $config['upload_path'] = "uploads/";
@@ -93,7 +115,7 @@ class miscursos extends CI_Controller {
                     window.location.href="../miscursos";
                     </script>';
         }
-        //$this->m_miscursos->save($config);
+        $this->m_miscursos->save($config);
         echo '<script type="text/javascript">
                     alert("Evidencia agregada correctamente");
                     window.location.href="../miscursos";

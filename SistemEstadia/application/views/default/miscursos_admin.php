@@ -4,6 +4,7 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <div class="col mb-2">
             <h4 class="modal-title">Mis Cursos</h4>
         </br>
             <?php foreach($ver->result() as $row): ?>
@@ -42,6 +43,5 @@
                 </tbody>
             </table>
         </div>
-       
     </body>
 </html>

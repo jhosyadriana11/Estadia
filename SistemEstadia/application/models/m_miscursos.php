@@ -31,7 +31,7 @@ class m_miscursos extends CI_Model {
 		return  $query;
     }
     
-    function save()
+    function save($config)
 	{
         $this->db->set('evidencia', $config['file_name']);
         $this->db->insert('detalleprocur');

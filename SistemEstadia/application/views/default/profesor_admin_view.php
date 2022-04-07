@@ -18,9 +18,9 @@
                     <tbody>
                     <?php foreach($table->result() as $row): ?>
                         <tr>
-                        <td valign='middle' align='left' style='' id="nombre"><?php echo $row->nombrep?></td>
-                        <td valign='middle' align='left' style=''><?php echo $count; ?></td>
-                        <?php echo "<td><a onclick='return nombrep();' class='btn btn-sm btn-secondary' href='miscursos_admin/index?idprofesor=".$row->idprofesor."'>Historial</td>"; ?>
+                            <td valign='middle' align='left' style='' id="nombrep"><?php echo $row->nombrep?></td>
+                            <td valign='middle' align='left' style=''><?php echo $row->total ?></td>
+                            <?php echo "<td><a onclick='return nombrep();' class='btn btn-sm btn-secondary' href='miscursos_admin/index?idprofesor=".$row->idprofesor."'>Historial</td>"; ?>
                         </tr>
                     <?php endforeach ?>
                     </tbody>

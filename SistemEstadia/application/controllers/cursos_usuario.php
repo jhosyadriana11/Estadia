@@ -14,10 +14,13 @@ class cursos_usuario extends CI_Controller {
 		
     }
     
+
     public function index()
 	{
-        $_SESSION['utc_ch']=2;
+		
 		$idprofesor=$this->input->get('idprofesor');
+		$_SESSION['utc_ch']=$idprofesor;
+		$_SESSION['utc_ch'];
 		$data = array(
             $requests = $this->m_cursos_usuario->get_cursos(),
 			$requests2 = $this->m_cursos_usuario->get_profesores($idprofesor),
@@ -25,18 +28,23 @@ class cursos_usuario extends CI_Controller {
             'data'	=> array ('table' => $requests, 'ver' => $requests2)
         );
         $this->load->view('template', $data);
+	
 	}
     
     public function savec()
 	{
+		$idprofesor=$this->input->get('idprofesor');
+		$idcurso=$this->input->get('idcurso');
+		$_SESSION['utc_ch']=$idprofesor;
+		$_SESSION['utc_ch'];
 		/*load registration view form*/
 		//$this->load->view('cursos_agregar_view');
 		/*Check submit button */
 		if($this->input->post('inscribirme'))
 		{
-			$data['idprofesor']=$this->input->post('idprofesor');
-            $data['idcurso']=$this->input->post('idcurso');
-			$response=$this->m_cursos_usuario>savecurso($data);
+			$idprofesor=$this->input->get('idprofesor');
+			$idcurso=$this->input->get('idcurso');
+			$response=$this->m_cursos_usuario->savecurso($idprofesor, $idcurso);
 			if($response==true){
 			        echo '<script type="text/javascript">
                     alert("Curso agregado correctamente");

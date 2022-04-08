@@ -33,8 +33,8 @@ class cursos_usuario extends CI_Controller {
     
     public function savec()
 	{
-		$idprofesor=$this->input->get('idprofesor');
-		$idcurso=$this->input->get('idcurso');
+		//$idprofesor=$this->input->get('idprofesor');
+		//$idcurso=$this->input->get('idcurso');
 		$_SESSION['utc_ch']=$idprofesor;
 		$_SESSION['utc_ch'];
 		/*load registration view form*/

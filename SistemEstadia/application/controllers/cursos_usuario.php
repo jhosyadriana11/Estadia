@@ -35,8 +35,8 @@ class cursos_usuario extends CI_Controller {
 	{
 		//$idprofesor=$this->input->get('idprofesor');
 		//$idcurso=$this->input->get('idcurso');
-		$_SESSION['utc_ch']=$idprofesor;
-		$_SESSION['utc_ch'];
+		//$_SESSION['utc_ch']=$idprofesor;
+		//$_SESSION['utc_ch'];
 		/*load registration view form*/
 		//$this->load->view('cursos_agregar_view');
 		/*Check submit button */
@@ -48,11 +48,14 @@ class cursos_usuario extends CI_Controller {
 			if($response==true){
 			        echo '<script type="text/javascript">
                     alert("Curso agregado correctamente");
-                    window.location.href="../miscursos";
+                    window.location.href="../";
                     </script>';
 			}
 			else{
-					echo "Insert error !";
+					echo '<script type="text/javascript">
+                    alert("No se puedo inscribir a ese curso");
+                    window.location.href="./";
+                    </script>';
 			}
 		}
 	}

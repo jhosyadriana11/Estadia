@@ -26,7 +26,7 @@
                     </tbody>
                     </form>
                 </table>
-                <p class="form-control-sm" style="margin: 350px 0px 300px 5px;">Número de filas:
+                <p class="form-control-sm" style="margin: 550px 0px 300px 5px;">Número de filas:
             <?php echo $this->db->count_all_results('profesor'); ?></p>
         </div>
     </body>
